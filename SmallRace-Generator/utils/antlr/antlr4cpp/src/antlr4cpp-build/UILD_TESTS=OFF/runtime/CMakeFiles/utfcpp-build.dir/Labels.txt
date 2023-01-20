@@ -1,0 +1,11 @@
+# Target labels
+ utfcpp
+# Source files and their labels
+/git/LAM/Smalltalk/build/locals/antlr4cpp/src/antlr4cpp-build/UILD_TESTS=OFF/runtime/CMakeFiles/utfcpp-build
+/git/LAM/Smalltalk/build/locals/antlr4cpp/src/antlr4cpp-build/UILD_TESTS=OFF/runtime/CMakeFiles/utfcpp-build.rule
+/git/LAM/Smalltalk/build/locals/antlr4cpp/src/antlr4cpp-build/UILD_TESTS=OFF/runtime/utfcpp-prefix/src/utfcpp-stamp/utfcpp-build.rule
+/git/LAM/Smalltalk/build/locals/antlr4cpp/src/antlr4cpp-build/UILD_TESTS=OFF/runtime/utfcpp-prefix/src/utfcpp-stamp/utfcpp-configure.rule
+/git/LAM/Smalltalk/build/locals/antlr4cpp/src/antlr4cpp-build/UILD_TESTS=OFF/runtime/utfcpp-prefix/src/utfcpp-stamp/utfcpp-skip-update.rule
+/git/LAM/Smalltalk/build/locals/antlr4cpp/src/antlr4cpp-build/UILD_TESTS=OFF/runtime/utfcpp-prefix/src/utfcpp-stamp/utfcpp-patch.rule
+/git/LAM/Smalltalk/build/locals/antlr4cpp/src/antlr4cpp-build/UILD_TESTS=OFF/runtime/utfcpp-prefix/src/utfcpp-stamp/utfcpp-download.rule
+/git/LAM/Smalltalk/build/locals/antlr4cpp/src/antlr4cpp-build/UILD_TESTS=OFF/runtime/utfcpp-prefix/src/utfcpp-stamp/utfcpp-mkdir.rule

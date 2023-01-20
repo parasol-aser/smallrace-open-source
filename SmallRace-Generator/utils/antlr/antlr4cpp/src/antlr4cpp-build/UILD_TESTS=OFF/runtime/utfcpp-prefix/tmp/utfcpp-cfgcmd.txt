@@ -1,0 +1,1 @@
+cmd='/usr/local/bin/cmake;-DCMAKE_INSTALL_PREFIX=/git/LAM/Smalltalk/build/locals/antlr4cpp/src/antlr4cpp-build/UILD_TESTS=OFF/runtime/thirdparty/utfcpp/install;-Dgtest_force_shared_crt=ON;-GUnix Makefiles;<SOURCE_DIR><SOURCE_SUBDIR>'

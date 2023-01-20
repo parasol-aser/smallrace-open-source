@@ -1,0 +1,13 @@
+# Hashes of file build rules.
+00eb9ab5426e78d99d732645ae8da18f runtime/CMakeFiles/make_lib_output_dir
+7592afe8a4917fdca709fc163e30df7d runtime/CMakeFiles/utfcpp
+7592afe8a4917fdca709fc163e30df7d runtime/CMakeFiles/utfcpp-build
+092adbec95a4aa1203f72fbc28a64ec2 runtime/CMakeFiles/utfcpp-complete
+728db446862616346e173b03e38c3770 runtime/utfcpp-prefix/src/utfcpp-stamp/utfcpp-build
+ce6f32677546c28bdeddaac2f3da4b27 runtime/utfcpp-prefix/src/utfcpp-stamp/utfcpp-configure
+15154d1e48d3af7c88b5c09fc94c72df runtime/utfcpp-prefix/src/utfcpp-stamp/utfcpp-download
+025e24722e8389b5b0ac7b401b4116da runtime/utfcpp-prefix/src/utfcpp-stamp/utfcpp-install
+30db71a3e1f173b1e9add899e3e3fce5 runtime/utfcpp-prefix/src/utfcpp-stamp/utfcpp-mkdir
+ded3e00f83ee5be1fbad4686b2e21bc0 runtime/utfcpp-prefix/src/utfcpp-stamp/utfcpp-patch
+d080992af9286a28f3817fb4ae33edc3 runtime/utfcpp-prefix/src/utfcpp-stamp/utfcpp-skip-update
+c08a4daf38f4c82718602dc180c1cc9f runtime/utfcpp-prefix/src/utfcpp-stamp/utfcpp-test

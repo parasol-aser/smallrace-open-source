@@ -1,0 +1,45 @@
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /git/LAM/Smalltalk/build/locals/antlr4cpp/src/antlr4cpp-build/runtime/utfcpp-prefix/src/utfcpp-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_86160/fast && make[6]: Entering directory '/git/LAM/Smalltalk/build/locals/antlr4cpp/src/antlr4cpp-build/runtime/utfcpp-prefix/src/utfcpp-build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_86160.dir/build.make CMakeFiles/cmTC_86160.dir/build
+make[7]: Entering directory '/git/LAM/Smalltalk/build/locals/antlr4cpp/src/antlr4cpp-build/runtime/utfcpp-prefix/src/utfcpp-build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_86160.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_86160.dir/src.c.o   -c /git/LAM/Smalltalk/build/locals/antlr4cpp/src/antlr4cpp-build/runtime/utfcpp-prefix/src/utfcpp-build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_86160
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_86160.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    -rdynamic CMakeFiles/cmTC_86160.dir/src.c.o  -o cmTC_86160 
+CMakeFiles/cmTC_86160.dir/src.c.o: In function `main':
+src.c:(.text+0x3e): undefined reference to `pthread_create'
+src.c:(.text+0x4a): undefined reference to `pthread_detach'
+src.c:(.text+0x5b): undefined reference to `pthread_join'
+src.c:(.text+0x6f): undefined reference to `pthread_atfork'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_86160.dir/build.make:86: recipe for target 'cmTC_86160' failed
+make[7]: *** [cmTC_86160] Error 1
+make[7]: Leaving directory '/git/LAM/Smalltalk/build/locals/antlr4cpp/src/antlr4cpp-build/runtime/utfcpp-prefix/src/utfcpp-build/CMakeFiles/CMakeTmp'
+Makefile:121: recipe for target 'cmTC_86160/fast' failed
+make[6]: *** [cmTC_86160/fast] Error 2
+make[6]: Leaving directory '/git/LAM/Smalltalk/build/locals/antlr4cpp/src/antlr4cpp-build/runtime/utfcpp-prefix/src/utfcpp-build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+

@@ -1,0 +1,204 @@
+Start testing: Dec 04 04:50 UTC
+----------------------------------------------------------
+1/4 Testing: negative_test
+1/4 Test: negative_test
+Command: "/git/LAM/Smalltalk/build/locals/antlr4cpp/src/antlr4cpp-build/runtime/utfcpp-prefix/src/utfcpp-build/tests/negative" "/git/LAM/Smalltalk/build/locals/antlr4cpp/src/antlr4cpp-build/runtime/thirdparty/utfcpp/tests/test_data/utf8_invalid.txt"
+Directory: /git/LAM/Smalltalk/build/locals/antlr4cpp/src/antlr4cpp-build/runtime/utfcpp-prefix/src/utfcpp-build/tests
+"negative_test" start time: Dec 04 04:50 UTC
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"negative_test" end time: Dec 04 04:50 UTC
+"negative_test" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/4 Testing: cpp11_test
+2/4 Test: cpp11_test
+Command: "/git/LAM/Smalltalk/build/locals/antlr4cpp/src/antlr4cpp-build/runtime/utfcpp-prefix/src/utfcpp-build/tests/cpp11"
+Directory: /git/LAM/Smalltalk/build/locals/antlr4cpp/src/antlr4cpp-build/runtime/utfcpp-prefix/src/utfcpp-build/tests
+"cpp11_test" start time: Dec 04 04:50 UTC
+Output:
+----------------------------------------------------------
+Running main() from /git/LAM/Smalltalk/build/locals/antlr4cpp/src/antlr4cpp-build/runtime/thirdparty/utfcpp/extern/gtest/googletest/src/gtest_main.cc
+[==========] Running 9 tests from 1 test case.
+[----------] Global test environment set-up.
+[----------] 9 tests from CPP11APITests
+[ RUN      ] CPP11APITests.test_append
+[       OK ] CPP11APITests.test_append (0 ms)
+[ RUN      ] CPP11APITests.test_utf16to8
+[       OK ] CPP11APITests.test_utf16to8 (0 ms)
+[ RUN      ] CPP11APITests.test_utf8to16
+[       OK ] CPP11APITests.test_utf8to16 (0 ms)
+[ RUN      ] CPP11APITests.test_utf32to8
+[       OK ] CPP11APITests.test_utf32to8 (0 ms)
+[ RUN      ] CPP11APITests.test_utf8to32
+[       OK ] CPP11APITests.test_utf8to32 (0 ms)
+[ RUN      ] CPP11APITests.test_find_invalid
+[       OK ] CPP11APITests.test_find_invalid (0 ms)
+[ RUN      ] CPP11APITests.test_is_valid
+[       OK ] CPP11APITests.test_is_valid (0 ms)
+[ RUN      ] CPP11APITests.test_replace_invalid
+[       OK ] CPP11APITests.test_replace_invalid (0 ms)
+[ RUN      ] CPP11APITests.test_starts_with_bom
+[       OK ] CPP11APITests.test_starts_with_bom (0 ms)
+[----------] 9 tests from CPP11APITests (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 9 tests from 1 test case ran. (0 ms total)
+[  PASSED  ] 9 tests.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"cpp11_test" end time: Dec 04 04:50 UTC
+"cpp11_test" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/4 Testing: api_test
+3/4 Test: api_test
+Command: "/git/LAM/Smalltalk/build/locals/antlr4cpp/src/antlr4cpp-build/runtime/utfcpp-prefix/src/utfcpp-build/tests/apitests"
+Directory: /git/LAM/Smalltalk/build/locals/antlr4cpp/src/antlr4cpp-build/runtime/utfcpp-prefix/src/utfcpp-build/tests
+"api_test" start time: Dec 04 04:50 UTC
+Output:
+----------------------------------------------------------
+Running main() from /git/LAM/Smalltalk/build/locals/antlr4cpp/src/antlr4cpp-build/runtime/thirdparty/utfcpp/extern/gtest/googletest/src/gtest_main.cc
+[==========] Running 29 tests from 4 test cases.
+[----------] Global test environment set-up.
+[----------] 14 tests from CheckedAPITests
+[ RUN      ] CheckedAPITests.test_append
+[       OK ] CheckedAPITests.test_append (0 ms)
+[ RUN      ] CheckedAPITests.test_next
+[       OK ] CheckedAPITests.test_next (0 ms)
+[ RUN      ] CheckedAPITests.test_peek_next
+[       OK ] CheckedAPITests.test_peek_next (0 ms)
+[ RUN      ] CheckedAPITests.test_prior
+[       OK ] CheckedAPITests.test_prior (0 ms)
+[ RUN      ] CheckedAPITests.test_advance
+[       OK ] CheckedAPITests.test_advance (0 ms)
+[ RUN      ] CheckedAPITests.test_distance
+[       OK ] CheckedAPITests.test_distance (0 ms)
+[ RUN      ] CheckedAPITests.test_utf32to8
+[       OK ] CheckedAPITests.test_utf32to8 (0 ms)
+[ RUN      ] CheckedAPITests.test_utf8to32
+[       OK ] CheckedAPITests.test_utf8to32 (0 ms)
+[ RUN      ] CheckedAPITests.test_utf16to8
+[       OK ] CheckedAPITests.test_utf16to8 (0 ms)
+[ RUN      ] CheckedAPITests.test_utf8to16
+[       OK ] CheckedAPITests.test_utf8to16 (0 ms)
+[ RUN      ] CheckedAPITests.test_replace_invalid
+[       OK ] CheckedAPITests.test_replace_invalid (0 ms)
+[ RUN      ] CheckedAPITests.test_find_invalid
+[       OK ] CheckedAPITests.test_find_invalid (0 ms)
+[ RUN      ] CheckedAPITests.test_is_valid
+[       OK ] CheckedAPITests.test_is_valid (0 ms)
+[ RUN      ] CheckedAPITests.test_starts_with_bom
+[       OK ] CheckedAPITests.test_starts_with_bom (0 ms)
+[----------] 14 tests from CheckedAPITests (0 ms total)
+
+[----------] 11 tests from UnCheckedAPITests
+[ RUN      ] UnCheckedAPITests.test_append
+[       OK ] UnCheckedAPITests.test_append (0 ms)
+[ RUN      ] UnCheckedAPITests.test_next
+[       OK ] UnCheckedAPITests.test_next (0 ms)
+[ RUN      ] UnCheckedAPITests.test_peek_next
+[       OK ] UnCheckedAPITests.test_peek_next (0 ms)
+[ RUN      ] UnCheckedAPITests.test_prior
+[       OK ] UnCheckedAPITests.test_prior (0 ms)
+[ RUN      ] UnCheckedAPITests.test_advance
+[       OK ] UnCheckedAPITests.test_advance (0 ms)
+[ RUN      ] UnCheckedAPITests.test_distance
+[       OK ] UnCheckedAPITests.test_distance (0 ms)
+[ RUN      ] UnCheckedAPITests.test_utf32to8
+[       OK ] UnCheckedAPITests.test_utf32to8 (0 ms)
+[ RUN      ] UnCheckedAPITests.test_utf8to32
+[       OK ] UnCheckedAPITests.test_utf8to32 (0 ms)
+[ RUN      ] UnCheckedAPITests.test_utf16to8
+[       OK ] UnCheckedAPITests.test_utf16to8 (0 ms)
+[ RUN      ] UnCheckedAPITests.test_utf8to16
+[       OK ] UnCheckedAPITests.test_utf8to16 (0 ms)
+[ RUN      ] UnCheckedAPITests.test_replace_invalid
+[       OK ] UnCheckedAPITests.test_replace_invalid (0 ms)
+[----------] 11 tests from UnCheckedAPITests (0 ms total)
+
+[----------] 2 tests from CheckedIteratrTests
+[ RUN      ] CheckedIteratrTests.test_increment
+[       OK ] CheckedIteratrTests.test_increment (0 ms)
+[ RUN      ] CheckedIteratrTests.test_decrement
+[       OK ] CheckedIteratrTests.test_decrement (0 ms)
+[----------] 2 tests from CheckedIteratrTests (0 ms total)
+
+[----------] 2 tests from UnCheckedIteratrTests
+[ RUN      ] UnCheckedIteratrTests.test_increment
+[       OK ] UnCheckedIteratrTests.test_increment (0 ms)
+[ RUN      ] UnCheckedIteratrTests.test_decrement
+[       OK ] UnCheckedIteratrTests.test_decrement (0 ms)
+[----------] 2 tests from UnCheckedIteratrTests (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 29 tests from 4 test cases ran. (0 ms total)
+[  PASSED  ] 29 tests.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"api_test" end time: Dec 04 04:50 UTC
+"api_test" time elapsed: 00:00:00
+----------------------------------------------------------
+
+4/4 Testing: noexceptions_test
+4/4 Test: noexceptions_test
+Command: "/git/LAM/Smalltalk/build/locals/antlr4cpp/src/antlr4cpp-build/runtime/utfcpp-prefix/src/utfcpp-build/tests/noexceptionstests"
+Directory: /git/LAM/Smalltalk/build/locals/antlr4cpp/src/antlr4cpp-build/runtime/utfcpp-prefix/src/utfcpp-build/tests
+"noexceptions_test" start time: Dec 04 04:50 UTC
+Output:
+----------------------------------------------------------
+Running main() from /git/LAM/Smalltalk/build/locals/antlr4cpp/src/antlr4cpp-build/runtime/thirdparty/utfcpp/extern/gtest/googletest/src/gtest_main.cc
+[==========] Running 13 tests from 2 test cases.
+[----------] Global test environment set-up.
+[----------] 11 tests from UnCheckedAPITests
+[ RUN      ] UnCheckedAPITests.test_append
+[       OK ] UnCheckedAPITests.test_append (0 ms)
+[ RUN      ] UnCheckedAPITests.test_next
+[       OK ] UnCheckedAPITests.test_next (0 ms)
+[ RUN      ] UnCheckedAPITests.test_peek_next
+[       OK ] UnCheckedAPITests.test_peek_next (0 ms)
+[ RUN      ] UnCheckedAPITests.test_prior
+[       OK ] UnCheckedAPITests.test_prior (0 ms)
+[ RUN      ] UnCheckedAPITests.test_advance
+[       OK ] UnCheckedAPITests.test_advance (0 ms)
+[ RUN      ] UnCheckedAPITests.test_distance
+[       OK ] UnCheckedAPITests.test_distance (0 ms)
+[ RUN      ] UnCheckedAPITests.test_utf32to8
+[       OK ] UnCheckedAPITests.test_utf32to8 (0 ms)
+[ RUN      ] UnCheckedAPITests.test_utf8to32
+[       OK ] UnCheckedAPITests.test_utf8to32 (0 ms)
+[ RUN      ] UnCheckedAPITests.test_utf16to8
+[       OK ] UnCheckedAPITests.test_utf16to8 (0 ms)
+[ RUN      ] UnCheckedAPITests.test_utf8to16
+[       OK ] UnCheckedAPITests.test_utf8to16 (0 ms)
+[ RUN      ] UnCheckedAPITests.test_replace_invalid
+[       OK ] UnCheckedAPITests.test_replace_invalid (0 ms)
+[----------] 11 tests from UnCheckedAPITests (0 ms total)
+
+[----------] 2 tests from UnCheckedIteratrTests
+[ RUN      ] UnCheckedIteratrTests.test_increment
+[       OK ] UnCheckedIteratrTests.test_increment (0 ms)
+[ RUN      ] UnCheckedIteratrTests.test_decrement
+[       OK ] UnCheckedIteratrTests.test_decrement (0 ms)
+[----------] 2 tests from UnCheckedIteratrTests (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 13 tests from 2 test cases ran. (0 ms total)
+[  PASSED  ] 13 tests.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"noexceptions_test" end time: Dec 04 04:50 UTC
+"noexceptions_test" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Dec 04 04:50 UTC

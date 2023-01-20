@@ -1,0 +1,117 @@
+To build and run SmallRace, clone this repository and build a docker image using the command:
+
+```
+docker pull jncsw/llvm12.0.1:latest
+docker build -t smallrace .
+docker run -i -t smallrace /bin/bash
+```
+
+The expected results are:
+
+```
+Step 9/9 : RUN /SmallRace-Detector/build/bin/openrace /SmallRace-Generator/build/bin/t.ll
+ ---> Running in 3d49a09042db
++=+=+=+= PTA runs for 87 ms
++=+=+=+= Build ThreadTrace runs for 0 ms
++=+=+=+= ProgramTrace runs for 87 ms
++=+=+=+= Size of Threads: 3
++=+=+=+= Size of Locks: 0
++=+=+= SharedMemory has 9 objects
+===== Program Trace =====
+---Thread0
+0 Read    %2 = call i8* @st.model.newObject(i8* getelementptr inbounds ([5 x i8], [5 x i8]* @Race1, i64 0, i64 0)), !dbg !9
+1 Write   %1 = call i8* @st.model.newTemp(i8* getelementptr inbounds ([5 x i8], [5 x i8]* @local_race1, i64 0, i64 0)), !dbg !7
+2 Read    %2 = call i8* @st.model.newObject(i8* getelementptr inbounds ([5 x i8], [5 x i8]* @Race1, i64 0, i64 0)), !dbg !9
+3 Call    %3 = call i8* @st.initialize(i8* %1), !dbg !11
+4 Write   %2 = call i8* @st.model.instVar(i8* getelementptr inbounds ([3 x i8], [3 x i8]* @max, i64 0, i64 0)), !dbg !7
+5 Read    %4 = call i8* @st.model.newObject2(i8* getelementptr inbounds ([5 x i8], [5 x i8]* @Array, i64 0, i64 0), i8* %3), !dbg !10
+6 Write   %5 = call i8* @st.model.instVar(i8* getelementptr inbounds ([6 x i8], [6 x i8]* @shared, i64 0, i64 0)), !dbg !11
+7 Read    %4 = call i8* @st.model.newObject2(i8* getelementptr inbounds ([5 x i8], [5 x i8]* @Array, i64 0, i64 0), i8* %3), !dbg !10
+8 Write   %7 = call i8* @st.model.instVar(i8* getelementptr inbounds ([6 x i8], [6 x i8]* @delay1, i64 0, i64 0)), !dbg !13
+9 Read    %6 = call i8* @"st.forMilliseconds:"(i8* getelementptr inbounds ([5 x i8], [5 x i8]* @Delay, i64 0, i64 0), i8* getelementptr inbounds ([2 x i8], [2 x i8]* @local_10, i64 0, i64 0)), !dbg !12
+10 Write          %9 = call i8* @st.model.instVar(i8* getelementptr inbounds ([6 x i8], [6 x i8]* @delay2, i64 0, i64 0)), !dbg !15
+11 Read   %8 = call i8* @"st.forMilliseconds:"(i8* getelementptr inbounds ([5 x i8], [5 x i8]* @Delay, i64 0, i64 0), i8* getelementptr inbounds ([2 x i8], [2 x i8]* @local_10, i64 0, i64 0)), !dbg !14
+12 EndCall        %3 = call i8* @st.initialize(i8* %1), !dbg !11
+13 Call   %4 = call i8* @st.start(i8* %1), !dbg !12
+14 Call   %2 = call i8* @st.startThread1(i8* getelementptr inbounds ([4 x i8], [4 x i8]* @local_self, i64 0, i64 0)), !dbg !7
+15 Fork   %6 = call i8* @"st.forkAt:named:"(i8* %5, i8* getelementptr inbounds ([2 x i8], [2 x i8]* @local_30, i64 0, i64 0), i8* getelementptr inbounds ([8 x i8], [8 x i8]* @"local_'1 race'", i64 0, i64 0)), !dbg !9
+16 Write          %7 = call i8* @st.model.instVar(i8* getelementptr inbounds ([7 x i8], [7 x i8]* @thread1, i64 0, i64 0)), !dbg !10
+17 Read   %6 = call i8* @"st.forkAt:named:"(i8* %5, i8* getelementptr inbounds ([2 x i8], [2 x i8]* @local_30, i64 0, i64 0), i8* getelementptr inbounds ([8 x i8], [8 x i8]* @"local_'1 race'", i64 0, i64 0)), !dbg !9
+18 EndCall        %2 = call i8* @st.startThread1(i8* getelementptr inbounds ([4 x i8], [4 x i8]* @local_self, i64 0, i64 0)), !dbg !7
+19 Call   %3 = call i8* @st.startThread2(i8* getelementptr inbounds ([4 x i8], [4 x i8]* @local_self, i64 0, i64 0)), !dbg !9
+20 Fork   %7 = call i8* @"st.forkAt:named:"(i8* %6, i8* getelementptr inbounds ([2 x i8], [2 x i8]* @local_31, i64 0, i64 0), i8* getelementptr inbounds ([8 x i8], [8 x i8]* @"local_'2 race'", i64 0, i64 0)), !dbg !9
+21 Write          %8 = call i8* @st.model.instVar(i8* getelementptr inbounds ([7 x i8], [7 x i8]* @thread2, i64 0, i64 0)), !dbg !10
+22 Read   %7 = call i8* @"st.forkAt:named:"(i8* %6, i8* getelementptr inbounds ([2 x i8], [2 x i8]* @local_31, i64 0, i64 0), i8* getelementptr inbounds ([8 x i8], [8 x i8]* @"local_'2 race'", i64 0, i64 0)), !dbg !9
+23 EndCall        %3 = call i8* @st.startThread2(i8* getelementptr inbounds ([4 x i8], [4 x i8]* @local_self, i64 0, i64 0)), !dbg !9
+24 EndCall        %4 = call i8* @st.start(i8* %1), !dbg !12
+25 Call   %7 = call i8* @st.stop(i8* %1), !dbg !15
+26 Call   %2 = call i8* @st.stopThread1(i8* getelementptr inbounds ([4 x i8], [4 x i8]* @local_self, i64 0, i64 0)), !dbg !7
+27 EndCall        %2 = call i8* @st.stopThread1(i8* getelementptr inbounds ([4 x i8], [4 x i8]* @local_self, i64 0, i64 0)), !dbg !7
+28 Call   %3 = call i8* @st.stopThread2(i8* getelementptr inbounds ([4 x i8], [4 x i8]* @local_self, i64 0, i64 0)), !dbg !9
+29 EndCall        %3 = call i8* @st.stopThread2(i8* getelementptr inbounds ([4 x i8], [4 x i8]* @local_self, i64 0, i64 0)), !dbg !9
+30 EndCall        %7 = call i8* @st.stop(i8* %1), !dbg !15
+---Thread1  (Spawned by T0:15)
+0 Call    %6 = call i8* @st.repeat(i8* %5), !dbg !7
+1 Call    %6 = call i8* @"st.to:do:"(i8* getelementptr inbounds ([1 x i8], [1 x i8]* @local_1, i64 0, i64 0), i8* %1, i8* %5), !dbg !10
+2 Write   %4 = call i8* @st.model.instVar(i8* getelementptr inbounds ([6 x i8], [6 x i8]* @shared, i64 0, i64 0)), !dbg !9
+3 EndCall         %6 = call i8* @"st.to:do:"(i8* getelementptr inbounds ([1 x i8], [1 x i8]* @local_1, i64 0, i64 0), i8* %1, i8* %5), !dbg !10
+4 Call    %8 = call i8* @"st.do:"(i8* %3, i8* %7), !dbg !12
+5 Call    %6 = call i8* @"st.ifFalse:"(i8* %4, i8* %5), !dbg !7
+6 Read    %3 = call i8* @st.model.binaryop(i8* getelementptr inbounds ([1 x i8], [1 x i8]* @"global_op_+", i64 0, i64 0), i8* %1, i8* getelementptr inbounds ([1 x i8], [1 x i8]* @local_1, i64 0, i64 0)), !dbg !7
+7 EndCall         %6 = call i8* @"st.ifFalse:"(i8* %4, i8* %5), !dbg !7
+8 EndCall         %8 = call i8* @"st.do:"(i8* %3, i8* %7), !dbg !12
+9 Call    %11 = call i8* @"st.ifTrue:"(i8* %9, i8* %10), !dbg !13
+10 Read   %4 = call i8* @"st.show:"(i8* getelementptr inbounds ([10 x i8], [10 x i8]* @Transcript, i64 0, i64 0), i8* getelementptr inbounds ([11 x i8], [11 x i8]* @"local_'#1 race: '", i64 0, i64 0)), !dbg !9
+11 Read   %2 = call i8* @st.model.newTemp(i8* getelementptr inbounds ([4 x i8], [4 x i8]* @local_race, i64 0, i64 0)), !dbg !7
+12 EndCall        %11 = call i8* @"st.ifTrue:"(i8* %9, i8* %10), !dbg !13
+13 EndCall        %6 = call i8* @st.repeat(i8* %5), !dbg !7
+---Thread2  (Spawned by T0:20)
+0 Call    %7 = call i8* @st.repeat(i8* %6), !dbg !7
+1 Call    %8 = call i8* @"st.to:do:"(i8* getelementptr inbounds ([1 x i8], [1 x i8]* @local_1, i64 0, i64 0), i8* %2, i8* %7), !dbg !11
+2 Write   %5 = call i8* @st.model.instVar(i8* getelementptr inbounds ([6 x i8], [6 x i8]* @shared, i64 0, i64 0)), !dbg !9
+3 EndCall         %8 = call i8* @"st.to:do:"(i8* getelementptr inbounds ([1 x i8], [1 x i8]* @local_1, i64 0, i64 0), i8* %2, i8* %7), !dbg !11
+4 Call    %10 = call i8* @"st.do:"(i8* %4, i8* %9), !dbg !13
+5 Call    %6 = call i8* @"st.ifFalse:"(i8* %4, i8* %5), !dbg !7
+6 Read    %3 = call i8* @st.model.binaryop(i8* getelementptr inbounds ([1 x i8], [1 x i8]* @"global_op_+", i64 0, i64 0), i8* %1, i8* getelementptr inbounds ([1 x i8], [1 x i8]* @local_1, i64 0, i64 0)), !dbg !7
+7 EndCall         %6 = call i8* @"st.ifFalse:"(i8* %4, i8* %5), !dbg !7
+8 EndCall         %10 = call i8* @"st.do:"(i8* %4, i8* %9), !dbg !13
+9 Call    %13 = call i8* @"st.ifTrue:"(i8* %11, i8* %12), !dbg !14
+10 Read   %4 = call i8* @"st.show:"(i8* getelementptr inbounds ([10 x i8], [10 x i8]* @Transcript, i64 0, i64 0), i8* getelementptr inbounds ([11 x i8], [11 x i8]* @"local_'#2 race: '", i64 0, i64 0)), !dbg !9
+11 Read   %2 = call i8* @st.model.newTemp(i8* getelementptr inbounds ([4 x i8], [4 x i8]* @local_race, i64 0, i64 0)), !dbg !7
+12 EndCall        %13 = call i8* @"st.ifTrue:"(i8* %11, i8* %12), !dbg !14
+13 EndCall        %7 = call i8* @st.repeat(i8* %6), !dbg !7
+========================
+
++=+=+=+= Race Detection runs for 0 ms
+==== Races ====
+========== Found a race between: ==========
+/SmallRace-Generator:examples/SharedStateExamples.st:62:1 /SmallRace-Generator:examples/SharedStateExamples.st:82:1
+        ---Source Code---
+        62|     [
+        82|     [
+
+        ---LLVM IR---
+        First Event: Write： 
+          %4 = call i8* @st.model.instVar(i8* getelementptr inbounds ([6 x i8], [6 x i8]* @shared, i64 0, i64 0)), !dbg !9
+        Second Event: Write： 
+          %5 = call i8* @st.model.instVar(i8* getelementptr inbounds ([6 x i8], [6 x i8]* @shared, i64 0, i64 0)), !dbg !9
+
+        ---Callstacks---
+        > st.start (/SmallRace-Generator:examples/Example.ws:6:0)
+        >   st.startThread1 (/SmallRace-Generator:examples/SharedStateExamples.st:53:0)
+        >     st.forkAt:named: (/SmallRace-Generator:examples/SharedStateExamples.st:62:1)
+        >       st.repeat (/SmallRace-Generator:examples/SharedStateExamples.st:63:1)
+        >         st.to:do: (/SmallRace-Generator:examples/SharedStateExamples.st:64:1)
+        ====
+        > st.start (/SmallRace-Generator:examples/Example.ws:6:0)
+        >   st.startThread2 (/SmallRace-Generator:examples/SharedStateExamples.st:54:0)
+        >     st.forkAt:named: (/SmallRace-Generator:examples/SharedStateExamples.st:82:1)
+        >       st.repeat (/SmallRace-Generator:examples/SharedStateExamples.st:83:1)
+        >         st.to:do: (/SmallRace-Generator:examples/SharedStateExamples.st:85:1)
+
+Total Races Detected: 1
+Removing intermediate container 3d49a09042db
+ ---> ef006d2d2147
+Successfully built ef006d2d2147
+Successfully tagged smallrace:latest
+```

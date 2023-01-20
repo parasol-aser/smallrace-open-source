@@ -1,0 +1,37 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/git/LAM/Smalltalk/build/locals/antlr4cpp/src/antlr4cpp-build/UILD_TESTS=OFF/runtime/CMakeFiles/utfcpp-build"
+		},
+		{
+			"file" : "/git/LAM/Smalltalk/build/locals/antlr4cpp/src/antlr4cpp-build/UILD_TESTS=OFF/runtime/CMakeFiles/utfcpp-build.rule"
+		},
+		{
+			"file" : "/git/LAM/Smalltalk/build/locals/antlr4cpp/src/antlr4cpp-build/UILD_TESTS=OFF/runtime/utfcpp-prefix/src/utfcpp-stamp/utfcpp-build.rule"
+		},
+		{
+			"file" : "/git/LAM/Smalltalk/build/locals/antlr4cpp/src/antlr4cpp-build/UILD_TESTS=OFF/runtime/utfcpp-prefix/src/utfcpp-stamp/utfcpp-configure.rule"
+		},
+		{
+			"file" : "/git/LAM/Smalltalk/build/locals/antlr4cpp/src/antlr4cpp-build/UILD_TESTS=OFF/runtime/utfcpp-prefix/src/utfcpp-stamp/utfcpp-skip-update.rule"
+		},
+		{
+			"file" : "/git/LAM/Smalltalk/build/locals/antlr4cpp/src/antlr4cpp-build/UILD_TESTS=OFF/runtime/utfcpp-prefix/src/utfcpp-stamp/utfcpp-patch.rule"
+		},
+		{
+			"file" : "/git/LAM/Smalltalk/build/locals/antlr4cpp/src/antlr4cpp-build/UILD_TESTS=OFF/runtime/utfcpp-prefix/src/utfcpp-stamp/utfcpp-download.rule"
+		},
+		{
+			"file" : "/git/LAM/Smalltalk/build/locals/antlr4cpp/src/antlr4cpp-build/UILD_TESTS=OFF/runtime/utfcpp-prefix/src/utfcpp-stamp/utfcpp-mkdir.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"utfcpp"
+		],
+		"name" : "utfcpp-build"
+	}
+}

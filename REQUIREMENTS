@@ -1,0 +1,2 @@
+We have reproduced our results on an AWS EC2 server (m5zn.6xlarge, 24 Core VCPU, 96 GB Memory) running Ubuntu Server 22.04 LTS, with 100 GB SSD. 
+The disk space required to run SmallRace is 10 GB.
