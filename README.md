@@ -33,7 +33,8 @@ make -j4
 ```
 
 To test SmallRace-Detector, simply run `./openrace ../../examples/t1_new.ll` under `./build/bin` folder.
-The expected output for each example can be found at exp<1,2,3>.txt under the examples folder.
+The LLVM IR output will be generated under the current workspace at ./build/bin, naming **t.ll**.
+
 
 # Research Paper
 
