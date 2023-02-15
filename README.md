@@ -36,10 +36,11 @@ To test SmallRace-Detector, simply run `./openrace ../../examples/t1_new.ll` und
 The LLVM IR output will be generated under the current workspace at ./build/bin, naming **t.ll**.
 
 
+
 # Research Paper
 
 
-For more information, please refer to research paper: "SmallRace: Static Race Detection for Dynamic Languages - A Case on Smalltalk" accepted by [ICSE'2023](https://conf.researchr.org/home/icse-2023).
+For more information, please refer to research paper: "SmallRace: Static Race Detection for Dynamic Languages - A Case on Smalltalk" accepted by [ICSE'2023](https://conf.researchr.org/home/icse-2023). The test example in this code repository is adopted as test 3 in the paper.
 
 
 
